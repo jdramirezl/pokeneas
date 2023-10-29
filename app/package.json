@@ -1,0 +1,22 @@
+{
+  "name": "pokeneas",
+  "version": "1.0.0",
+  "description": "Pokeneas app for Software",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdramirezl/pokeneas.git"
+  },
+  "author": "julian ramirez, viviana hoyos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdramirezl/pokeneas/issues"
+  },
+  "homepage": "https://github.com/jdramirezl/pokeneas#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
