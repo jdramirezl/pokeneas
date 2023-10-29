@@ -1,4 +1,4 @@
-export class Pokenea {
+export default class Pokenea {
   constructor(
     private id: number,
     private name: string,

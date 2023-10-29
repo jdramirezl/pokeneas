@@ -1,4 +1,4 @@
-import { Pokenea } from "../models/pokenea.model";
+import  Pokenea  from "../models/Pokenea";
 import { HardcodedPokeneas } from "../utils/data.utils";
 
 export class PokeneaService {

@@ -1,13 +1,19 @@
 import { Router } from "express";
-import { PokeneaController } from "../../controllers/pokenea.controller";
+import PokeneaController from "../../controllers/PokeneaController";
 
 const router: Router = Router();
-const pokeneaController: PokeneaController = new PokeneaController();
+const pokeneaController = new PokeneaController(); // Create an instance of the controller
 
-router.get("/", (req, res) => pokeneaController.getPokeneas(req, res));
-router.get("/:id", (req, res) => pokeneaController.getPokenea(req, res));
-router.get("/random", (req, res) =>
-  pokeneaController.getRandomPokenea(req, res)
-);
+router.get('/', (req, res) => {
+  pokeneaController.getAllPokeneas(req, res);
+});
+
+router.get('/random', (req, res) => {
+  pokeneaController.getPokenea(req, res);
+});
+
+router.get('/random-show', (req, res) => {
+  pokeneaController.randomPokeneasInfoShow(req, res);
+});
 
 export { router as pokeneaRouter };
