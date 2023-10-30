@@ -1,12 +1,16 @@
 import express, { Express, Request, Response, Application } from "express";
+import { errorMiddleware } from "./middlewares/error.middleware";
+import router from "./routes/api/api.route";
+import { localRouter } from "./routes/local/routes.route";
+const app = express();
+const PORT = process.env.PORT || 80;
 
-const app: Application = express();
-const port = process.env.PORT || 8000;
+app.use(express.json());
+app.use("/api", router);
+app.use("/", localRouter);
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("Welcome to Express & TypeScript Server");
-});
+app.use(errorMiddleware);
 
-app.listen(port, () => {
-  console.log(`Server is Fire at http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
