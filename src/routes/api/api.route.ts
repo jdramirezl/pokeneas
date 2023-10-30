@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { pokeneaRouter } from "./pokenea.route";
-import { PokeDexIndexView } from "../../views/PokeDexIndexView";
+import { PokeDexIndexView } from "../../views/pokenea/index.view";
+
 const router: Router = Router();
 
 router.get("/", (req, res) => {
