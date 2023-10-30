@@ -1,20 +1,49 @@
-import  Pokenea  from "../models/Pokenea";
-import { HardcodedPokeneas } from "../utils/data.utils";
+import { Pokenea } from "../models/pokenea.model";
+import { Storage } from "../models/storage/storage.interface";
+import { castJSONtoModel } from "../utils/data.utils";
 
 export class PokeneaService {
-  public getPokeneas(): Pokenea[] {
-    return HardcodedPokeneas;
+  private storage: Storage;
+  private uri: string;
+  private username?: string;
+  private password?: string;
+
+  constructor(
+    storage: Storage,
+    uri: string,
+    username?: string,
+    password?: string
+  ) {
+    this.uri = uri;
+    this.username = username;
+    this.password = password;
+    // @ts-ignore
+    this.storage = storage;
+    storage.start();
   }
 
-  public getPokenea(id: number): Pokenea {
-    return (
-      HardcodedPokeneas.find((pokenea: Pokenea) => pokenea.getId() === id) ??
-      new Pokenea(0, "", 0, [], "", "")
-    );
+  public getPokeneas(): Pokenea[] {
+    const data: JSON[] = this.storage.getData(this.uri);
+    const pokeneas: Pokenea[] = data.map((json: JSON) => {
+      return castJSONtoModel(json, Pokenea);
+    });
+
+    return pokeneas;
+  }
+
+  public getPokenea(id: number): Pokenea | null {
+    const pokeneas: Pokenea[] = this.getPokeneas();
+    const pokenea: Pokenea | null =
+      pokeneas.find((pokenea: Pokenea) => {
+        return pokenea.getId() === id;
+      }) ?? null;
+    return pokenea;
   }
 
   public getRandomPokenea(): Pokenea {
-    var index: number = Math.floor(Math.random() * HardcodedPokeneas.length);
-    return HardcodedPokeneas[index];
+    const pokeneas: Pokenea[] = this.getPokeneas();
+    const randomIndex: number = Math.floor(Math.random() * pokeneas.length);
+    const randomPokenea: Pokenea = pokeneas[randomIndex];
+    return randomPokenea;
   }
 }
