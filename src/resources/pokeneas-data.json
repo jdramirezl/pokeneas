@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Narconea",
+    "height": 0.4,
+    "skills": ["Contrabando - Puede obtener objetos raros de manera efectiva"],
+    "image": "https://storage.googleapis.com/pokeneas_data/narconea.png",
+    "philosophical_phrase": "Maestro de las transacciones clandestinas"
+  },
+  {
+    "id": 2,
+    "name": "Rapneamon",
+    "height": 1.7,
+    "skills": [
+      "Flow Mortal - Aumenta su poder de ataque con cada movimiento exitoso"
+    ],
+    "image": "https://storage.googleapis.com/pokeneas_data/rapneamon.png",
+    "philosophical_phrase": "Rapneamon, ¡tira candela en las rimas!"
+  },
+  {
+    "id": 3,
+    "name": "Estilosoar",
+    "height": 0.7,
+    "skills": [
+      "Elegancia Urbana - Aumenta la velocidad y la precisión en entornos urbanos"
+    ],
+    "image": "https://storage.googleapis.com/pokeneas_data/estilosoar.png",
+    "philosophical_phrase": "Estilosoar, el Pokémon con más estilo en las calles."
+  }
+]

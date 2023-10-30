@@ -1,12 +1,16 @@
 import { Request, Response } from "express";
-import { PokeneaShow } from "../views/PokeneaShow";
+import { PokeneaShow } from "../views/pokenea/show.view";
 import { PokeneaService } from "../services/pokenea.service";
-import Pokenea from "../models/Pokenea";
+import { LocalStorage } from "../models/storage/localStorage.model";
+import { Pokenea } from "../models/pokenea.model";
 
 const os = require("os");
 
-export default class PokeneaController {
-  private pokeneaService: PokeneaService = new PokeneaService();
+class PokeneaController {
+  private pokeneaService: PokeneaService = new PokeneaService(
+    new LocalStorage(process.env.STORAGE_PATH ?? ""),
+    process.env.STORAGE_URI ?? ""
+  );
   private containerId: string = os.hostname();
 
   public getAllPokeneas(req: Request, res: Response): void {
@@ -34,3 +38,4 @@ export default class PokeneaController {
   }
 }
 
+export { PokeneaController };

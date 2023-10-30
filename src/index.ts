@@ -2,6 +2,7 @@ import express, { Express, Request, Response, Application } from "express";
 import { errorMiddleware } from "./middlewares/error.middleware";
 import router from "./routes/api/api.route";
 import { localRouter } from "./routes/local/routes.route";
+
 const app = express();
 const PORT = process.env.PORT || 80;
 
