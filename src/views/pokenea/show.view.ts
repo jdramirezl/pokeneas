@@ -1,4 +1,4 @@
-import Pokenea from "../models/Pokenea";
+import { Pokenea } from "../../models/pokenea.model";
 
 export const PokeneaShow = (data: {
   pokemon: Pokenea;
@@ -18,3 +18,4 @@ export const PokeneaShow = (data: {
   </html>    
     `;
 };
+

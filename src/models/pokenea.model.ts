@@ -1,4 +1,4 @@
-export default class Pokenea {
+class Pokenea {
   constructor(
     private id: number,
     private name: string,
@@ -67,3 +67,5 @@ export default class Pokenea {
     return `Pokenea[id=${this.id}, name=${this.name}, height=${this.height}, skills=${this.skills}, image=${this.image}, philosphical_phrase=${this.philosphical_phrase}]`;
   }
 }
+
+export { Pokenea };
