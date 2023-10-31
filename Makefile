@@ -3,7 +3,13 @@
 $(eval APP_NAME := $(shell basename $(shell pwd)))
 APP_NAME = neamon
 
+docker-build:
+	@echo "Building $(APP_NAME)..."
+	@docker build -t $(APP_NAME) .
+	@echo "Built $(APP_NAME)"
+
 docker-run:
+	@echo "Remember to run 'make docker-build' first!"
 	@echo "Running $(APP_NAME)..."
 	@docker run -p 8080:8080 \
 	--name $(APP_NAME) \

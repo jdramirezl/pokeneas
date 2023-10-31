@@ -3,7 +3,9 @@
     "id": 1,
     "name": "Narconea",
     "height": 0.4,
-    "skills": ["Contrabando - Puede obtener objetos raros de manera efectiva"],
+    "skills": [
+      "Contrabando - Puede obtener objetos raros de manera efectiva"
+    ],
     "image": "https://storage.googleapis.com/pokeneas_data/narconea.png",
     "philosophical_phrase": "Maestro de las transacciones clandestinas"
   },
@@ -26,5 +28,48 @@
     ],
     "image": "https://storage.googleapis.com/pokeneas_data/estilosoar.png",
     "philosophical_phrase": "Estilosoar, el Pokémon con más estilo en las calles."
+  },
+  {
+    "id": 4,
+    "name": "Nachomon",
+    "height": 0.3,
+    "skills": [
+      "Canto de la Hinchada - Nachomon emite un grito que aumenta la moral y la fuerza de su equipo en batalla.",
+      "El Escorpión- Un poderoso ataque de tipo Lucha inspirado en  René Higuita"
+    ],
+    "image": "https://storage.googleapis.com/pokeneas_data/nachomon.png",
+    "philosophical_phrase": "Verde, mi pasión, mi razón. Nacional, por siempre en mi corazón"
+  },
+  {
+    "id": 5,
+    "name": "Tombomon",
+    "height": 0.3,
+    "skills": [
+      "Tragabillete - Tombomon obliga a su oponente a detenerse y entregarle billete llevar de comer"
+    ],
+    "image": "https://storage.googleapis.com/pokeneas_data/tombomon.png",
+    "philosophical_phrase": "¿Como me puede ayudar jefe?, mire suelta algo y no te he visto"
+  },
+  {
+    "id": 6,
+    "name": "Mormon",
+    "height": 0.3,
+    "skills": [
+      "'Mirada' Hipnotizante - Puede hipnotizar a sus oponentes durante la batalla, confundiéndolos y reduciendo su precisión.",
+      "Los pasos prohibidos- Un combo de pasos  que le confieren mayor resistencia y fuerza en batalla, solo funciona si hay Guaracha"
+    ],
+    "image": "https://storage.googleapis.com/pokeneas_data/mormon.png",
+    "philosophical_phrase": "Ahí si perdiste mor,¿dejarme de ti?, eso si jamás"
+  },
+  {
+    "id": 7,
+    "name": "Arrieromon",
+    "height": 1,
+    "skills": [
+      "Machetazo- Un potente ataque con el machete que puede cortar a través de obstáculos o partes de oponentes",
+      "Defensor del monte - Aumenta su fuerza y precisión cuando lucha contra Pokémon de tipo Siniestro o Fantasma"
+    ],
+    "image": "https://storage.googleapis.com/pokeneas_data/arrieromon.png",
+    "philosophical_phrase": "Mijito, ya sabe que por viejo se conoce al diablo y a sus mañas."
   }
 ]

@@ -2,7 +2,7 @@ import { Router } from "express";
 import { PokeneaController } from "../../controllers/pokenea.controller";
 
 const router: Router = Router();
-const pokeneaController = new PokeneaController(); // Create an instance of the controller
+const pokeneaController = new PokeneaController();
 
 router.get("/", (req, res) => {
   pokeneaController.getAllPokeneas(req, res);
