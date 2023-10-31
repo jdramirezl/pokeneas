@@ -31,7 +31,7 @@ export class PokeneaService {
     return pokeneas;
   }
 
-  public getPokenea(id: number): Pokenea | null {
+  public getPokeneaById(id: number): Pokenea | null {
     const pokeneas: Pokenea[] = this.getPokeneas();
     const pokenea: Pokenea | null =
       pokeneas.find((pokenea: Pokenea) => {
