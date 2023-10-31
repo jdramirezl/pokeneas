@@ -5,14 +5,14 @@ class Pokenea {
     private height: number,
     private skills: string[],
     private image: string,
-    private philosphical_phrase: string
+    private philosophical_phrase: string
   ) {
     this.id = id;
     this.name = name;
     this.height = height;
     this.skills = skills;
     this.image = image;
-    this.philosphical_phrase = philosphical_phrase;
+    this.philosophical_phrase = philosophical_phrase;
   }
 
   // Getters
@@ -37,7 +37,7 @@ class Pokenea {
   }
 
   public getPhilosphicalPhrase(): string {
-    return this.philosphical_phrase;
+    return this.philosophical_phrase;
   }
 
   // Setters
@@ -58,13 +58,13 @@ class Pokenea {
   }
 
   public setPhilosphicalPhrase(philosphical_phrase: string): void {
-    this.philosphical_phrase = philosphical_phrase;
+    this.philosophical_phrase = philosphical_phrase;
   }
 
   // Utils
 
   public toString(): string {
-    return `Pokenea[id=${this.id}, name=${this.name}, height=${this.height}, skills=${this.skills}, image=${this.image}, philosphical_phrase=${this.philosphical_phrase}]`;
+    return `Pokenea[id=${this.id}, name=${this.name}, height=${this.height}, skills=${this.skills}, image=${this.image}, philosphical_phrase=${this.philosophical_phrase}]`;
   }
 }
 
