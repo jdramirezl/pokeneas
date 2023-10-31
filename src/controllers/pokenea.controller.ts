@@ -8,8 +8,8 @@ const os = require("os");
 
 class PokeneaController {
   private pokeneaService: PokeneaService = new PokeneaService(
-    new LocalStorage(process.env.STORAGE_PATH ?? ""),
-    process.env.STORAGE_URI ?? ""
+    new LocalStorage(process.env.STORAGE_PATH ?? "src/resources/pokeneas-data.json"),
+    process.env.STORAGE_URI ?? "src/resources/pokeneas-data.json"
   );
   private containerId: string = os.hostname();
 
@@ -23,8 +23,14 @@ class PokeneaController {
 
   public getPokenea(req: Request, res: Response): void {
     const randomPokenea: Pokenea = this.pokeneaService.getRandomPokenea();
+    const requestedPokeneaInfo = {
+      id: randomPokenea.getId(),
+      name: randomPokenea.getName(),
+      height: randomPokenea.getHeight(),
+      skills: randomPokenea.getSkills(),
+    };
     res.status(200).json({
-      pokenea: randomPokenea,
+      pokenea: requestedPokeneaInfo,
       containerId: this.containerId,
     });
   }
